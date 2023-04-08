@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #b7c4c4;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.chokshi.deep.pos_system.SalesController">
+   <left>
+      <AnchorPane prefHeight="720.0" prefWidth="450.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="289.0" layoutY="703.0" mnemonicParsing="false" onAction="#onPrintButtonClick" prefHeight="40.0" prefWidth="140.0" text="PRINT" AnchorPane.bottomAnchor="27.0">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Button>
+            <Button layoutX="34.0" layoutY="703.0" mnemonicParsing="false" onAction="#onDeleteButtonClick" prefHeight="40.0" prefWidth="140.0" text="DELETE" AnchorPane.bottomAnchor="27.0">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Button>
+            <TableView fx:id="salesTable" editable="true" layoutX="34.0" layoutY="43.0" prefHeight="578.0" prefWidth="438.0" style="-fx-font-size: 25px">
+              <columns>
+                 <TableColumn prefWidth="178.0" text="Product">
+                    <cellValueFactory><PropertyValueFactory property="product" /></cellValueFactory>
+                 </TableColumn>
+                 <TableColumn prefWidth="105.0" text="Qty">
+                     <cellValueFactory><PropertyValueFactory property="quantity" /></cellValueFactory>
+                 </TableColumn>
+                 <TableColumn prefWidth="152.0" text="Amount">
+                    <cellValueFactory><PropertyValueFactory property="price" /></cellValueFactory>
+                 </TableColumn>
+              </columns>
+            </TableView>
+            <Label layoutX="34.0" layoutY="640.0" prefHeight="50.0" prefWidth="186.0" text="Total Amount">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="totalAmountLabel" layoutX="318.0" layoutY="640.0" prefHeight="50.0" prefWidth="140.0" text="0" textAlignment="RIGHT">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="numpadAnchorPane" disable="true" layoutX="43.0" layoutY="378.0" AnchorPane.bottomAnchor="34.0" AnchorPane.leftAnchor="43.0" AnchorPane.rightAnchor="356.0" AnchorPane.topAnchor="378.0">
+               <children>
+                  <GridPane fx:id="numpadGridPane" alignment="CENTER" hgap="10.0" prefHeight="388.0" prefWidth="431.0" vgap="10.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="350.0" minWidth="10.0" prefWidth="223.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="200.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="350.0" minWidth="10.0" prefWidth="200.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="270.0" minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="270.0" minHeight="4.0" prefHeight="90.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="270.0" minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="270.0" minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="270.0" minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onInputButtonClick" prefHeight="200.0" prefWidth="450.0" text="1" textAlignment="CENTER" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onInputButtonClick" prefHeight="200.0" prefWidth="450.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onInputButtonClick" prefHeight="200.0" prefWidth="450.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onInputButtonClick" prefHeight="200.0" prefWidth="450.0" text="4" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onInputButtonClick" prefHeight="200.0" prefWidth="450.0" text="5" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onInputButtonClick" prefHeight="200.0" prefWidth="450.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onInputButtonClick" prefHeight="200.0" prefWidth="450.0" text="7" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onInputButtonClick" prefHeight="200.0" prefWidth="450.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onInputButtonClick" prefHeight="200.0" prefWidth="450.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onInputButtonClick" prefHeight="200.0" prefWidth="450.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onClearButtonClick" prefHeight="200.0" prefWidth="450.0" text="CLEAR" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onEnterButtonClick" prefHeight="200.0" prefWidth="450.0" text="Enter" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Label textFill="RED" GridPane.rowIndex="1" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="200.0" prefWidth="450.0" text="QTY" textFill="WHITE">
+                           <font>
+                              <Font name="Times New Roman" size="36.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="quantityText" prefHeight="150.0" prefWidth="300.0" promptText="Quantity" GridPane.columnIndex="1" GridPane.columnSpan="2">
+                           <font>
+                              <Font name="Times New Roman" size="24.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <Button fx:id="mainMenuButton" layoutX="526.0" layoutY="700.0" mnemonicParsing="false" onAction="#onMainMenuButtonClick" prefHeight="66.0" prefWidth="155.0" text="MAIN MENU" AnchorPane.bottomAnchor="34.0" AnchorPane.rightAnchor="149.0">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Button>
+            <Label fx:id="errorLabel" layoutX="535.0" layoutY="348.0" prefHeight="214.0" prefWidth="146.0" textFill="RED" wrapText="true">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <ToggleButton layoutX="70.0" layoutY="70.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="160.0" text="Big Ride-80">
+               <toggleGroup>
+                  <ToggleGroup fx:id="productToggleGroup" />
+               </toggleGroup>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </ToggleButton>
+
+            <ToggleButton layoutX="259.0" layoutY="70.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="232.0" text="Unlimited Adult-360" toggleGroup="$productToggleGroup">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </ToggleButton>
+            <ToggleButton layoutX="70.0" layoutY="170.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="161.0" text="Small Ride-40" toggleGroup="$productToggleGroup">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </ToggleButton>
+            <ToggleButton layoutX="259.0" layoutY="170.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="232.0" text="Unlimited Child-150" toggleGroup="$productToggleGroup">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </ToggleButton>
+            
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

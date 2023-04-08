@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #b7c4c4;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.chokshi.deep.pos_system.LoginController">
+   <top>
+      <Text fill="#163f72" strokeType="OUTSIDE" strokeWidth="0.0" text="ADVENTURE WORLD" textAlignment="CENTER" wrappingWidth="660.13671875" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Times New Roman Bold" size="48.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets top="20.0" />
+         </BorderPane.margin>
+      </Text>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="0.0" prefWidth="659.0" style="-fx-background-color: #023144;" BorderPane.alignment="CENTER" />
+   </bottom>
+   <left>
+      <ImageView fitHeight="363.0" fitWidth="417.0" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../../../../../../../../../../Personal/branding/DCfavicon_auto_x2-removebg-preview.png" />
+         </image>
+      </ImageView>
+   </left>
+   <center>
+      <GridPane alignment="CENTER" hgap="10.0" vgap="10.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="350.0" minWidth="10.0" prefWidth="223.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="200.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="350.0" minWidth="10.0" prefWidth="200.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="270.0" minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="270.0" minHeight="4.0" prefHeight="90.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="270.0" minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="270.0" minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="270.0" minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="270.0" minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="oneButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onInputButtonClick" prefHeight="200.0" prefWidth="450.0" text="1" textAlignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="twoButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onInputButtonClick" prefHeight="200.0" prefWidth="450.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="threeButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onInputButtonClick" prefHeight="200.0" prefWidth="450.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="fourButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onInputButtonClick" prefHeight="200.0" prefWidth="450.0" text="4" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="fiveButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onInputButtonClick" prefHeight="200.0" prefWidth="450.0" text="5" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="sixButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onInputButtonClick" prefHeight="200.0" prefWidth="450.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="sevenButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onInputButtonClick" prefHeight="200.0" prefWidth="450.0" text="7" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="eightButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onInputButtonClick" prefHeight="200.0" prefWidth="450.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="nineButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onInputButtonClick" prefHeight="200.0" prefWidth="450.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="zeroButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onInputButtonClick" prefHeight="200.0" prefWidth="450.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="clearButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onClearButtonClick" prefHeight="200.0" prefWidth="450.0" text="CLEAR" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="enterButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onLoginButtonClick" prefHeight="200.0" prefWidth="450.0" text="ENTER" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="shutdownButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onShutdownButtonClick" prefHeight="200.0" prefWidth="450.0" text="SHUT DOWN" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+            <Label fx:id="errorLabel" textFill="RED" GridPane.rowIndex="1" />
+            <PasswordField fx:id="pinInput" alignment="CENTER" prefHeight="68.0" prefWidth="726.0" promptText="PIN" GridPane.columnSpan="3">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </PasswordField>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="100.0" left="100.0" right="100.0" top="100.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </center>
+</BorderPane>

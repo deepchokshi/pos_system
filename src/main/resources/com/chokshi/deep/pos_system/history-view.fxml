@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #023144;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.chokshi.deep.pos_system.HistoryController">
+   <children>
+      <Label layoutX="107.0" layoutY="27.0" prefHeight="62.0" prefWidth="119.0" text="Start Date" textFill="WHITE" AnchorPane.leftAnchor="107.0" AnchorPane.rightAnchor="1054.0" AnchorPane.topAnchor="27.0">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="endDatePicker" layoutX="654.0" layoutY="27.0" prefHeight="62.0" prefWidth="221.0" AnchorPane.topAnchor="27.0" />
+      <Label layoutX="525.0" layoutY="27.0" prefHeight="62.0" prefWidth="119.0" text="End Date" textFill="WHITE" AnchorPane.topAnchor="27.0">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="searchButton" layoutX="985.0" layoutY="27.0" mnemonicParsing="false" onAction="#onSearchButtonClick" prefHeight="62.0" prefWidth="148.0" text="Search" AnchorPane.topAnchor="27.0">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Button>
+      <DatePicker fx:id="startDatePicker" layoutX="226.0" layoutY="27.0" prefHeight="62.0" prefWidth="221.0" AnchorPane.topAnchor="27.0" />
+      <TableView fx:id="historyTable" editable="true" layoutX="107.0" layoutY="119.0" prefHeight="563.0" prefWidth="991.0" AnchorPane.bottomAnchor="118.0" AnchorPane.leftAnchor="107.0" AnchorPane.rightAnchor="182.0" AnchorPane.topAnchor="119.0">
+        <columns>
+          <TableColumn prefWidth="232.0" text="Ticket No.">
+             <cellValueFactory><PropertyValueFactory property="ticketNumber" /></cellValueFactory>
+          </TableColumn>
+            <TableColumn prefWidth="303.0" text="Product">
+               <cellValueFactory><PropertyValueFactory property="product" /></cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="208.0" text="Amount">
+               <cellValueFactory><PropertyValueFactory property="price" /></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="checkBoxColumn" prefWidth="247.0" text="Re Generate">
+
+            </TableColumn>
+        </columns>
+      </TableView>
+      <Button fx:id="mainmenuButton" layoutX="107.0" layoutY="704.0" mnemonicParsing="false" onAction="#onMainMenuButtonClick" prefHeight="62.0" prefWidth="139.0" text="MAIN MENU" AnchorPane.bottomAnchor="34.0" AnchorPane.leftAnchor="107.0">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="errorLabel" layoutX="190.0" layoutY="704.0" prefHeight="62.0" prefWidth="740.0" textFill="RED">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="printButton" layoutX="272.0" layoutY="704.0" mnemonicParsing="false"  onAction="#onPrintButtonClick" prefHeight="62.0" prefWidth="148.0" text="Print" AnchorPane.bottomAnchor="34.0" AnchorPane.leftAnchor="272.0">
+         <font>
+            <Font name="Times New Roman Bold" size="24.0" />
+         </font></Button>
+   </children>
+</AnchorPane>
